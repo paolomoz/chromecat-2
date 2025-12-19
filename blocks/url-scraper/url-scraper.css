@@ -1,0 +1,202 @@
+/* URL Scraper Block Styles */
+
+main .url-scraper {
+  padding: 40px 24px;
+  background: #f8f9fa;
+  border-radius: 8px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+main .url-scraper .url-scraper-container {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+main .url-scraper .url-scraper-title {
+  font-family: var(--heading-font-family, system-ui, sans-serif);
+  font-size: 28px;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin: 0;
+}
+
+main .url-scraper .url-scraper-description {
+  font-size: 16px;
+  color: #666;
+  margin: 0;
+  line-height: 1.5;
+}
+
+main .url-scraper .url-scraper-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+main .url-scraper .url-scraper-form.loading {
+  opacity: 0.7;
+  pointer-events: none;
+}
+
+main .url-scraper .url-scraper-field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+main .url-scraper .url-scraper-field label {
+  font-weight: 600;
+  font-size: 14px;
+  color: #333;
+}
+
+main .url-scraper .url-scraper-field input {
+  padding: 12px 16px;
+  font-size: 15px;
+  border: 2px solid #e0e0e0;
+  border-radius: 6px;
+  background: #fff;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+main .url-scraper .url-scraper-field input:focus {
+  outline: none;
+  border-color: #5c2d91;
+  box-shadow: 0 0 0 3px rgb(92 45 145 / 15%);
+}
+
+main .url-scraper .url-scraper-field input::placeholder {
+  color: #999;
+}
+
+main .url-scraper .url-scraper-hint {
+  font-size: 12px;
+  color: #888;
+}
+
+main .url-scraper .url-scraper-options {
+  display: flex;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+main .url-scraper .url-scraper-checkbox {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  color: #555;
+  cursor: pointer;
+}
+
+main .url-scraper .url-scraper-checkbox input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  accent-color: #5c2d91;
+  cursor: pointer;
+}
+
+main .url-scraper .url-scraper-actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 8px;
+}
+
+main .url-scraper .url-scraper-actions button {
+  padding: 14px 28px;
+  font-size: 15px;
+  font-weight: 600;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.1s;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+main .url-scraper .url-scraper-actions button:active {
+  transform: scale(0.98);
+}
+
+main .url-scraper .url-scraper-actions button:disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+main .url-scraper .url-scraper-actions button.primary {
+  background: linear-gradient(135deg, #5c2d91 0%, #bd0b36 100%);
+  color: #fff;
+  border: none;
+}
+
+main .url-scraper .url-scraper-actions button.primary:hover:not(:disabled) {
+  background: linear-gradient(135deg, #4a2475 0%, #9a092c 100%);
+}
+
+main .url-scraper .url-scraper-actions button.secondary {
+  background: #fff;
+  color: #5c2d91;
+  border: 2px solid #5c2d91;
+}
+
+main .url-scraper .url-scraper-actions button.secondary:hover:not(:disabled) {
+  background: #f5f0fa;
+}
+
+main .url-scraper .url-scraper-spinner {
+  display: none;
+  width: 16px;
+  height: 16px;
+  border: 2px solid transparent;
+  border-top-color: currentcolor;
+  border-radius: 50%;
+  animation: url-scraper-spin 0.8s linear infinite;
+}
+
+main .url-scraper .url-scraper-actions button.loading .url-scraper-btn-text {
+  opacity: 0.7;
+}
+
+main .url-scraper .url-scraper-actions button.loading .url-scraper-spinner {
+  display: block;
+}
+
+@keyframes url-scraper-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+main .url-scraper .url-scraper-status {
+  padding: 12px 16px;
+  background: #e8f5e9;
+  color: #2e7d32;
+  border-radius: 6px;
+  font-size: 14px;
+  display: none;
+}
+
+main .url-scraper .url-scraper-status:not(:empty) {
+  display: block;
+}
+
+main .url-scraper .url-scraper-error {
+  padding: 12px 16px;
+  background: #ffebee;
+  color: #c62828;
+  border-radius: 6px;
+  font-size: 14px;
+  display: none;
+}
+
+main .url-scraper .url-scraper-error.visible {
+  display: block;
+}
+
+@media (width >= 600px) {
+  main .url-scraper {
+    padding: 48px 40px;
+  }
+}

@@ -1,0 +1,216 @@
+/* Project Manager Block Styles */
+
+main .project-manager {
+  padding: 20px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgb(0 0 0 / 8%);
+}
+
+main .project-manager .project-manager-container {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+main .project-manager .project-manager-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+main .project-manager .project-manager-title {
+  font-size: 16px;
+  font-weight: 600;
+  color: #333;
+  margin: 0;
+}
+
+main .project-manager .project-manager-new {
+  padding: 8px 16px;
+  font-size: 13px;
+  font-weight: 500;
+  background: #5c2d91;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+main .project-manager .project-manager-new:hover {
+  background: #4a2475;
+}
+
+main .project-manager .project-manager-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+main .project-manager .project-manager-loading,
+main .project-manager .project-manager-error,
+main .project-manager .project-manager-empty {
+  padding: 24px;
+  text-align: center;
+  color: #888;
+  font-size: 14px;
+}
+
+main .project-manager .project-manager-error {
+  color: #c62828;
+  background: #ffebee;
+  border-radius: 6px;
+}
+
+main .project-manager .project-manager-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 16px;
+  background: #f8f9fa;
+  border-radius: 6px;
+  border: 2px solid transparent;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+main .project-manager .project-manager-item:hover {
+  background: #f0f0f0;
+}
+
+main .project-manager .project-manager-item.selected {
+  border-color: #5c2d91;
+  background: #f5f0fa;
+}
+
+main .project-manager .project-manager-item-info {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  flex: 1;
+  min-width: 0;
+}
+
+main .project-manager .project-manager-item-name {
+  font-weight: 600;
+  color: #333;
+  font-size: 14px;
+}
+
+main .project-manager .project-manager-item-url {
+  font-size: 12px;
+  color: #888;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+main .project-manager .project-manager-item-actions {
+  display: flex;
+  gap: 8px;
+}
+
+main .project-manager .project-manager-item-actions button {
+  padding: 6px 12px;
+  font-size: 12px;
+  font-weight: 500;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+main .project-manager .project-manager-select {
+  background: #5c2d91;
+  color: #fff;
+  border: none;
+}
+
+main .project-manager .project-manager-select:hover {
+  background: #4a2475;
+}
+
+main .project-manager .project-manager-delete {
+  background: #fff;
+  color: #c62828;
+  border: 1px solid #c62828;
+}
+
+main .project-manager .project-manager-delete:hover {
+  background: #ffebee;
+}
+
+main .project-manager .project-manager-form h4 {
+  font-size: 16px;
+  font-weight: 600;
+  color: #333;
+  margin: 0 0 16px;
+}
+
+main .project-manager .project-manager-form form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+main .project-manager .project-manager-field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+main .project-manager .project-manager-field label {
+  font-size: 13px;
+  font-weight: 600;
+  color: #555;
+}
+
+main .project-manager .project-manager-field input {
+  padding: 10px 12px;
+  font-size: 14px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  transition: border-color 0.2s;
+}
+
+main .project-manager .project-manager-field input:focus {
+  outline: none;
+  border-color: #5c2d91;
+}
+
+main .project-manager .project-manager-form-actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 8px;
+}
+
+main .project-manager .project-manager-form-actions button {
+  padding: 10px 20px;
+  font-size: 14px;
+  font-weight: 500;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+main .project-manager .project-manager-save {
+  background: #5c2d91;
+  color: #fff;
+  border: none;
+}
+
+main .project-manager .project-manager-save:hover {
+  background: #4a2475;
+}
+
+main .project-manager .project-manager-cancel {
+  background: #fff;
+  color: #666;
+  border: 1px solid #ddd;
+}
+
+main .project-manager .project-manager-cancel:hover {
+  background: #f5f5f5;
+}

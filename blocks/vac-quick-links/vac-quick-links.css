@@ -1,0 +1,84 @@
+/* VAC Quick Links Block Styles */
+
+main .vac-quick-links-wrapper {
+  max-width: unset;
+  padding: 0;
+}
+
+main .vac-quick-links {
+  background-color: #fff;
+  padding: 20px 24px;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+@media (width >= 900px) {
+  main .vac-quick-links {
+    padding: 30px 80px;
+  }
+}
+
+main .vac-quick-links .vac-quick-links-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px 40px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  max-width: 1200px;
+  margin-inline: auto;
+}
+
+@media (width >= 900px) {
+  main .vac-quick-links .vac-quick-links-list {
+    justify-content: space-around;
+    gap: 20px;
+  }
+}
+
+main .vac-quick-links .vac-quick-links-item {
+  flex: 0 1 auto;
+}
+
+main .vac-quick-links .vac-quick-links-link {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+  color: #333;
+  font-family: var(--body-font-family);
+  font-size: 14px;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+main .vac-quick-links .vac-quick-links-link:hover {
+  color: #bd0b36;
+  text-decoration: none;
+}
+
+main .vac-quick-links .vac-quick-links-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+}
+
+main .vac-quick-links .vac-quick-links-icon img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+main .vac-quick-links .vac-quick-links-text {
+  white-space: nowrap;
+}
+
+main .vac-quick-links .vac-quick-links-arrow {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23bd0b36' viewBox='0 0 24 24'%3E%3Cpath d='M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z'/%3E%3C/svg%3E") no-repeat center;
+  background-size: contain;
+}

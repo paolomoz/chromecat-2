@@ -1,0 +1,48 @@
+# Cloudflare Workers configuration for Visual Comparison Tool
+name = "chromecat-visual-compare"
+main = "src/index.ts"
+compatibility_date = "2024-09-23"
+compatibility_flags = ["nodejs_compat"]
+
+# Account ID (set via environment or wrangler login)
+# account_id = ""
+
+# Development settings
+[dev]
+port = 8787
+local_protocol = "http"
+
+# Browser Rendering API binding
+[browser]
+binding = "BROWSER"
+
+# R2 bucket for screenshots and diff images
+[[r2_buckets]]
+binding = "R2_BUCKET"
+bucket_name = "chromecat-screenshots"
+preview_bucket_name = "chromecat-screenshots-preview"
+
+# KV namespace for config and cache
+[[kv_namespaces]]
+binding = "KV"
+id = "d1d518dddec94aa5b2d1d1705746fb68"
+
+# D1 database for projects and results
+[[d1_databases]]
+binding = "DB"
+database_name = "chromecat-db"
+database_id = "38fb430b-1cdc-43f9-bf8b-3cc763e62f3a"
+
+# Environment variables
+[vars]
+ENVIRONMENT = "development"
+CORS_ORIGIN = "*"
+
+# Production environment
+[env.production]
+vars = { ENVIRONMENT = "production", CORS_ORIGIN = "https://main--chromecat-2--paoloserra.aem.live" }
+
+# Routes (optional - can also use custom domains)
+# routes = [
+#   { pattern = "api.chromecat.workers.dev/*", zone_name = "workers.dev" }
+# ]

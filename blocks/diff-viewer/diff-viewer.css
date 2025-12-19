@@ -1,0 +1,277 @@
+/* Diff Viewer Block Styles */
+
+main .diff-viewer {
+  padding: 24px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgb(0 0 0 / 8%);
+}
+
+main .diff-viewer .diff-viewer-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+main .diff-viewer .diff-viewer-header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+}
+
+main .diff-viewer .diff-viewer-controls {
+  display: flex;
+  gap: 4px;
+  background: #f0f0f0;
+  padding: 4px;
+  border-radius: 8px;
+}
+
+main .diff-viewer .diff-viewer-mode {
+  padding: 8px 16px;
+  font-size: 13px;
+  font-weight: 500;
+  background: transparent;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  color: #666;
+  transition: all 0.2s;
+}
+
+main .diff-viewer .diff-viewer-mode:hover {
+  color: #333;
+}
+
+main .diff-viewer .diff-viewer-mode.active {
+  background: #fff;
+  color: #5c2d91;
+  box-shadow: 0 1px 3px rgb(0 0 0 / 10%);
+}
+
+main .diff-viewer .diff-viewer-stats {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+main .diff-viewer .diff-viewer-percentage {
+  font-size: 24px;
+  font-weight: 700;
+  color: #333;
+}
+
+main .diff-viewer .diff-viewer-percentage.pass {
+  color: #2e7d32;
+}
+
+main .diff-viewer .diff-viewer-percentage.close {
+  color: #f57c00;
+}
+
+main .diff-viewer .diff-viewer-percentage.fail,
+main .diff-viewer .diff-viewer-percentage.error {
+  color: #c62828;
+}
+
+main .diff-viewer .diff-viewer-status {
+  font-size: 14px;
+  font-weight: 600;
+  padding: 4px 12px;
+  border-radius: 20px;
+  background: #e0e0e0;
+  color: #666;
+}
+
+main .diff-viewer .diff-viewer-status.pass {
+  background: #e8f5e9;
+  color: #2e7d32;
+}
+
+main .diff-viewer .diff-viewer-status.close {
+  background: #fff3e0;
+  color: #f57c00;
+}
+
+main .diff-viewer .diff-viewer-status.fail,
+main .diff-viewer .diff-viewer-status.error {
+  background: #ffebee;
+  color: #c62828;
+}
+
+main .diff-viewer .diff-viewer-empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 20px;
+  color: #999;
+  text-align: center;
+}
+
+main .diff-viewer .diff-viewer-empty-icon {
+  width: 64px;
+  height: 64px;
+  margin-bottom: 16px;
+  color: #ccc;
+}
+
+main .diff-viewer .diff-viewer-empty-icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+main .diff-viewer .diff-viewer-empty p {
+  font-size: 16px;
+  margin: 0;
+}
+
+main .diff-viewer .diff-viewer-images {
+  display: grid;
+  gap: 16px;
+}
+
+main .diff-viewer .diff-viewer-images[data-mode="side-by-side"] {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+main .diff-viewer .diff-viewer-images[data-mode="overlay"] .diff-viewer-live,
+main .diff-viewer .diff-viewer-images[data-mode="overlay"] .diff-viewer-test {
+  display: none;
+}
+
+main .diff-viewer .diff-viewer-images[data-mode="diff"] .diff-viewer-live,
+main .diff-viewer .diff-viewer-images[data-mode="diff"] .diff-viewer-test {
+  display: none;
+}
+
+main .diff-viewer .diff-viewer-images[data-mode="diff"] {
+  grid-template-columns: 1fr;
+}
+
+main .diff-viewer .diff-viewer-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+main .diff-viewer .diff-viewer-panel h4 {
+  font-size: 13px;
+  font-weight: 600;
+  color: #666;
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+main .diff-viewer .diff-viewer-img-wrapper {
+  border: 1px solid #e0e0e0;
+  border-radius: 6px;
+  overflow: hidden;
+  background: #fafafa;
+}
+
+main .diff-viewer .diff-viewer-img-wrapper img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+main .diff-viewer .diff-viewer-overlay-container {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+main .diff-viewer .diff-viewer-overlay-wrapper {
+  position: relative;
+  border: 1px solid #e0e0e0;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+main .diff-viewer .diff-viewer-overlay-wrapper img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+main .diff-viewer .diff-viewer-overlay-test {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0.5;
+}
+
+main .diff-viewer .diff-viewer-slider-container {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+main .diff-viewer .diff-viewer-slider-container label {
+  font-size: 14px;
+  color: #666;
+}
+
+main .diff-viewer .diff-viewer-opacity-slider {
+  flex: 1;
+  max-width: 300px;
+  height: 6px;
+  appearance: none;
+  background: #e0e0e0;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+main .diff-viewer .diff-viewer-opacity-slider::-webkit-slider-thumb {
+  appearance: none;
+  width: 18px;
+  height: 18px;
+  background: #5c2d91;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+main .diff-viewer .diff-viewer-region-selector {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding-top: 16px;
+  border-top: 1px solid #eee;
+}
+
+main .diff-viewer .diff-viewer-region-selector label {
+  font-size: 14px;
+  font-weight: 500;
+  color: #333;
+}
+
+main .diff-viewer .diff-viewer-region-select {
+  flex: 1;
+  max-width: 400px;
+  padding: 10px 12px;
+  font-size: 14px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  background: #fff;
+  cursor: pointer;
+}
+
+main .diff-viewer .diff-viewer-region-select:focus {
+  outline: none;
+  border-color: #5c2d91;
+}
+
+@media (width < 900px) {
+  main .diff-viewer .diff-viewer-images[data-mode="side-by-side"] {
+    grid-template-columns: 1fr;
+  }
+
+  main .diff-viewer .diff-viewer-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

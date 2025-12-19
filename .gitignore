@@ -2,8 +2,15 @@
 coverage/*
 logs/*
 node_modules/*
+.claude/skills/scrape-webpage/scripts/node_modules/*
+test/node_modules/*
+workers/node_modules/*
+test/*
+import-work/*
+
 
 helix-importer-ui
 .DS_Store
 *.bak
 .idea
+.env

@@ -1,0 +1,165 @@
+/* SW Hero Block Styles */
+
+.sw-hero-container {
+  max-width: unset;
+  padding: 0;
+  margin: 0;
+}
+
+.sw-hero-container .sw-hero-wrapper {
+  max-width: unset;
+  padding: 0;
+}
+
+.section.sw-hero-container {
+  margin: 0;
+  padding: 0;
+}
+
+.section.sw-hero-container > div {
+  max-width: unset;
+  padding: 0;
+}
+
+main .sw-hero {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  overflow: visible;
+  background-color: #fff;
+}
+
+/* Background image wrapper - fixed height matching original */
+main .sw-hero .sw-hero-background {
+  position: relative;
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+}
+
+@media (width >= 600px) {
+  main .sw-hero .sw-hero-background {
+    height: 280px;
+  }
+}
+
+@media (width >= 900px) {
+  main .sw-hero .sw-hero-background {
+    height: 352px;
+  }
+}
+
+main .sw-hero .sw-hero-background img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+}
+
+main .sw-hero .sw-hero-overlay {
+  display: none;
+}
+
+/* Content positioned to overlap image bottom - matching live site */
+main .sw-hero .sw-hero-content {
+  position: absolute;
+  z-index: 3;
+  width: 100%;
+  max-width: 1280px;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 120px;
+  padding: 0 24px;
+}
+
+@media (width >= 600px) {
+  main .sw-hero .sw-hero-content {
+    top: 160px;
+    padding: 0 44px;
+  }
+}
+
+@media (width >= 900px) {
+  main .sw-hero .sw-hero-content {
+    top: 150px;
+    padding: 0 44px;
+  }
+}
+
+main .sw-hero .sw-hero-content-box {
+  background-color: rgba(255, 255, 255, 0.92);
+  padding: 36px 44px;
+  max-width: 320px;
+}
+
+@media (width >= 600px) {
+  main .sw-hero .sw-hero-content-box {
+    max-width: 360px;
+    padding: 40px 48px;
+  }
+}
+
+@media (width >= 900px) {
+  main .sw-hero .sw-hero-content-box {
+    max-width: 400px;
+    padding: 44px 52px;
+  }
+}
+
+main .sw-hero .sw-hero-title {
+  font-family: var(--heading-font-family, Arial, sans-serif);
+  font-size: 32px;
+  font-weight: 300;
+  line-height: 1.15;
+  color: #000;
+  margin: 0 0 16px;
+}
+
+@media (width >= 600px) {
+  main .sw-hero .sw-hero-title {
+    font-size: 38px;
+    margin: 0 0 18px;
+  }
+}
+
+@media (width >= 900px) {
+  main .sw-hero .sw-hero-title {
+    font-size: 44px;
+    margin: 0 0 20px;
+  }
+}
+
+main .sw-hero .sw-hero-description {
+  font-family: var(--body-font-family, Arial, sans-serif);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.6;
+  color: #333;
+  margin: 0;
+}
+
+@media (width >= 600px) {
+  main .sw-hero .sw-hero-description {
+    font-size: 15px;
+  }
+}
+
+@media (width >= 900px) {
+  main .sw-hero .sw-hero-description {
+    font-size: 16px;
+    line-height: 1.7;
+  }
+}
+
+/* Add padding below to make room for content box overlap */
+main .sw-hero::after {
+  content: '';
+  display: block;
+  height: 180px;
+}
+
+@media (width >= 900px) {
+  main .sw-hero::after {
+    height: 200px;
+  }
+}

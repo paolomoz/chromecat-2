@@ -1,0 +1,289 @@
+/* Results Dashboard Block Styles */
+
+main .results-dashboard {
+  padding: 24px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgb(0 0 0 / 8%);
+}
+
+main .results-dashboard .results-dashboard-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+main .results-dashboard .results-dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+main .results-dashboard .results-dashboard-title {
+  font-size: 20px;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin: 0;
+}
+
+main .results-dashboard .results-dashboard-actions-header {
+  display: flex;
+  gap: 8px;
+}
+
+main .results-dashboard .results-dashboard-actions-header button {
+  padding: 8px 16px;
+  font-size: 13px;
+  font-weight: 500;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+main .results-dashboard .results-dashboard-retry-all {
+  background: #fff;
+  color: #5c2d91;
+  border: 1px solid #5c2d91;
+}
+
+main .results-dashboard .results-dashboard-retry-all:hover:not(:disabled) {
+  background: #f5f0fa;
+}
+
+main .results-dashboard .results-dashboard-export {
+  background: #5c2d91;
+  color: #fff;
+  border: none;
+}
+
+main .results-dashboard .results-dashboard-export:hover:not(:disabled) {
+  background: #4a2475;
+}
+
+main .results-dashboard .results-dashboard-actions-header button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+main .results-dashboard .results-dashboard-empty {
+  padding: 40px 20px;
+  text-align: center;
+  color: #888;
+  background: #fafafa;
+  border-radius: 6px;
+}
+
+main .results-dashboard .results-dashboard-empty p {
+  margin: 0;
+  font-size: 15px;
+}
+
+main .results-dashboard .results-dashboard-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+
+main .results-dashboard .results-dashboard-table th {
+  text-align: left;
+  padding: 12px 16px;
+  font-weight: 600;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: #666;
+  background: #f8f9fa;
+  border-bottom: 2px solid #e0e0e0;
+}
+
+main .results-dashboard .results-dashboard-table td {
+  padding: 16px;
+  border-bottom: 1px solid #eee;
+  vertical-align: middle;
+}
+
+main .results-dashboard .results-dashboard-table tr:hover {
+  background: #fafafa;
+}
+
+main .results-dashboard .results-dashboard-region {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+main .results-dashboard .results-dashboard-region-name {
+  font-weight: 500;
+  color: #333;
+}
+
+main .results-dashboard .results-dashboard-region-id {
+  font-size: 12px;
+  color: #888;
+  font-family: monospace;
+}
+
+main .results-dashboard .results-dashboard-diff {
+  min-width: 150px;
+}
+
+main .results-dashboard .results-dashboard-diff-value {
+  font-weight: 600;
+  font-size: 15px;
+  color: #333;
+}
+
+main .results-dashboard .results-dashboard-diff-bar {
+  height: 4px;
+  background: #e0e0e0;
+  border-radius: 2px;
+  margin-top: 6px;
+  overflow: hidden;
+}
+
+main .results-dashboard .results-dashboard-diff-fill {
+  height: 100%;
+  border-radius: 2px;
+  transition: width 0.3s ease;
+}
+
+main .results-dashboard .results-dashboard-diff-fill.pass {
+  background: #4caf50;
+}
+
+main .results-dashboard .results-dashboard-diff-fill.close {
+  background: #ff9800;
+}
+
+main .results-dashboard .results-dashboard-diff-fill.fail,
+main .results-dashboard .results-dashboard-diff-fill.error {
+  background: #f44336;
+}
+
+main .results-dashboard .results-dashboard-status-badge {
+  display: inline-block;
+  padding: 4px 12px;
+  font-size: 12px;
+  font-weight: 600;
+  border-radius: 20px;
+  text-transform: uppercase;
+}
+
+main .results-dashboard .results-dashboard-status-badge.pass {
+  background: #e8f5e9;
+  color: #2e7d32;
+}
+
+main .results-dashboard .results-dashboard-status-badge.close {
+  background: #fff3e0;
+  color: #f57c00;
+}
+
+main .results-dashboard .results-dashboard-status-badge.fail,
+main .results-dashboard .results-dashboard-status-badge.error {
+  background: #ffebee;
+  color: #c62828;
+}
+
+main .results-dashboard .results-dashboard-actions {
+  display: flex;
+  gap: 8px;
+}
+
+main .results-dashboard .results-dashboard-actions button {
+  padding: 6px 12px;
+  font-size: 12px;
+  font-weight: 500;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+main .results-dashboard .results-dashboard-view {
+  background: #fff;
+  color: #5c2d91;
+  border: 1px solid #5c2d91;
+}
+
+main .results-dashboard .results-dashboard-view:hover {
+  background: #f5f0fa;
+}
+
+main .results-dashboard .results-dashboard-retry {
+  background: #f5f5f5;
+  color: #666;
+  border: 1px solid #ddd;
+}
+
+main .results-dashboard .results-dashboard-retry:hover {
+  background: #eee;
+  color: #333;
+}
+
+main .results-dashboard .results-dashboard-summary {
+  display: flex;
+  gap: 24px;
+  padding: 20px;
+  background: #f8f9fa;
+  border-radius: 8px;
+  margin-top: 8px;
+}
+
+main .results-dashboard .results-dashboard-stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  padding: 0 24px;
+}
+
+main .results-dashboard .results-dashboard-stat:not(:last-child) {
+  border-right: 1px solid #e0e0e0;
+}
+
+main .results-dashboard .results-dashboard-stat-value {
+  font-size: 32px;
+  font-weight: 700;
+}
+
+main .results-dashboard .results-dashboard-stat.passed .results-dashboard-stat-value {
+  color: #2e7d32;
+}
+
+main .results-dashboard .results-dashboard-stat.close .results-dashboard-stat-value {
+  color: #f57c00;
+}
+
+main .results-dashboard .results-dashboard-stat.failed .results-dashboard-stat-value {
+  color: #c62828;
+}
+
+main .results-dashboard .results-dashboard-stat-label {
+  font-size: 13px;
+  color: #666;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+@media (width < 768px) {
+  main .results-dashboard .results-dashboard-table {
+    font-size: 13px;
+  }
+
+  main .results-dashboard .results-dashboard-table th,
+  main .results-dashboard .results-dashboard-table td {
+    padding: 12px 8px;
+  }
+
+  main .results-dashboard .results-dashboard-summary {
+    flex-wrap: wrap;
+  }
+
+  main .results-dashboard .results-dashboard-stat {
+    flex: 1;
+    min-width: 80px;
+    border-right: none !important;
+  }
+}

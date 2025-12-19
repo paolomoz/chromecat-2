@@ -1,0 +1,142 @@
+/* VAC Footer Block Styles */
+
+main .vac-footer-wrapper {
+  max-width: unset;
+  padding: 0;
+  margin: 0;
+}
+
+main .vac-footer {
+  background-color: #f5f5f5;
+  padding: 40px 24px 20px;
+  position: relative;
+}
+
+@media (width >= 900px) {
+  main .vac-footer {
+    padding: 60px 80px 30px;
+  }
+}
+
+main .vac-footer .vac-footer-container {
+  max-width: 1200px;
+  margin-inline: auto;
+}
+
+main .vac-footer .vac-footer-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 30px;
+}
+
+@media (width >= 600px) {
+  main .vac-footer .vac-footer-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (width >= 900px) {
+  main .vac-footer .vac-footer-grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px;
+  }
+}
+
+main .vac-footer .vac-footer-column {
+  padding-bottom: 20px;
+}
+
+main .vac-footer .vac-footer-column-title {
+  font-family: var(--heading-font-family);
+  font-size: 14px;
+  font-weight: 700;
+  color: #333;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin: 0 0 16px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid #bd0b36;
+}
+
+main .vac-footer .vac-footer-links {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+main .vac-footer .vac-footer-links li {
+  margin-bottom: 10px;
+}
+
+main .vac-footer .vac-footer-links a {
+  font-family: var(--body-font-family);
+  font-size: 13px;
+  color: #666;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+main .vac-footer .vac-footer-links a:hover {
+  color: #bd0b36;
+  text-decoration: none;
+}
+
+/* Cookie notice */
+main .vac-footer .vac-footer-cookie {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #f8f8f8;
+  border-top: 1px solid #e5e5e5;
+  padding: 16px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  z-index: 1000;
+}
+
+@media (width >= 900px) {
+  main .vac-footer .vac-footer-cookie {
+    padding: 16px 80px;
+  }
+}
+
+main .vac-footer .vac-footer-cookie p {
+  font-family: var(--body-font-family);
+  font-size: 13px;
+  color: #666;
+  margin: 0;
+  line-height: 1.5;
+}
+
+main .vac-footer .vac-footer-cookie a {
+  color: #bd0b36;
+  text-decoration: underline;
+}
+
+main .vac-footer .vac-footer-cookie a:hover {
+  color: #8b0a29;
+}
+
+main .vac-footer .vac-footer-cookie-close {
+  background: none;
+  border: none;
+  font-size: 24px;
+  color: #666;
+  cursor: pointer;
+  padding: 0;
+  line-height: 1;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+main .vac-footer .vac-footer-cookie-close:hover {
+  color: #333;
+  background: none;
+}

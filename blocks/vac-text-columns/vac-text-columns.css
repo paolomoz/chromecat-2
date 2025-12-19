@@ -1,0 +1,112 @@
+/* VAC Text Columns Block Styles */
+
+main .vac-text-columns {
+  padding: 40px 24px;
+  background-color: #f8f8f8;
+}
+
+@media (width >= 900px) {
+  main .vac-text-columns {
+    padding: 60px 80px;
+  }
+}
+
+main .vac-text-columns .vac-text-columns-container {
+  max-width: 1200px;
+  margin-inline: auto;
+}
+
+main .vac-text-columns .vac-text-columns-title {
+  font-family: var(--heading-font-family);
+  font-size: 28px;
+  font-weight: 300;
+  margin: 0 0 40px;
+  text-align: left;
+  background: linear-gradient(90deg, #5c2d91 0%, #bd0b36 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+@media (width >= 900px) {
+  main .vac-text-columns .vac-text-columns-title {
+    font-size: 32px;
+  }
+}
+
+main .vac-text-columns .vac-text-columns-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 30px;
+}
+
+@media (width >= 600px) {
+  main .vac-text-columns .vac-text-columns-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (width >= 900px) {
+  main .vac-text-columns .vac-text-columns-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+  }
+}
+
+main .vac-text-columns .vac-text-columns-column {
+  padding: 20px 0;
+}
+
+main .vac-text-columns .vac-text-columns-column-title {
+  font-family: var(--heading-font-family);
+  font-size: 20px;
+  font-weight: 600;
+  color: #5c2d91;
+  margin: 0 0 16px;
+}
+
+main .vac-text-columns .vac-text-columns-description {
+  font-family: var(--body-font-family);
+  font-size: 14px;
+  line-height: 1.7;
+  color: #666;
+  margin: 0 0 20px;
+}
+
+main .vac-text-columns .vac-text-columns-description p {
+  margin: 0 0 12px;
+}
+
+main .vac-text-columns .vac-text-columns-description p:last-child {
+  margin-bottom: 0;
+}
+
+main .vac-text-columns .vac-text-columns-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--body-font-family);
+  font-size: 14px;
+  font-weight: 600;
+  color: #bd0b36;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+main .vac-text-columns .vac-text-columns-cta:hover {
+  color: #8b0a29;
+  text-decoration: none;
+}
+
+main .vac-text-columns .vac-text-columns-arrow {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23bd0b36' viewBox='0 0 24 24'%3E%3Cpath d='M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z'/%3E%3C/svg%3E") no-repeat center;
+  background-size: contain;
+  transition: transform 0.2s ease;
+}
+
+main .vac-text-columns .vac-text-columns-cta:hover .vac-text-columns-arrow {
+  transform: translateX(4px);
+}

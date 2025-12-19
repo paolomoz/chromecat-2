@@ -1,0 +1,182 @@
+/* Block Editor Block Styles */
+
+main .block-editor {
+  padding: 0;
+  background: #1e1e1e;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+main .block-editor .block-editor-container {
+  display: flex;
+  flex-direction: column;
+  height: 600px;
+}
+
+main .block-editor .block-editor-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 20px;
+  background: #252526;
+  border-bottom: 1px solid #3c3c3c;
+}
+
+main .block-editor .block-editor-title {
+  font-size: 16px;
+  font-weight: 600;
+  color: #fff;
+  margin: 0;
+}
+
+main .block-editor .block-editor-actions {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+main .block-editor .block-editor-block-select {
+  padding: 8px 12px;
+  font-size: 13px;
+  background: #3c3c3c;
+  color: #fff;
+  border: 1px solid #5c5c5c;
+  border-radius: 4px;
+  min-width: 200px;
+}
+
+main .block-editor .block-editor-block-select:focus {
+  outline: none;
+  border-color: #007acc;
+}
+
+main .block-editor .block-editor-actions button {
+  padding: 8px 16px;
+  font-size: 13px;
+  font-weight: 500;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+main .block-editor .block-editor-save {
+  background: #0e639c;
+  color: #fff;
+  border: none;
+}
+
+main .block-editor .block-editor-save:hover:not(:disabled) {
+  background: #1177bb;
+}
+
+main .block-editor .block-editor-save:disabled {
+  background: #3c3c3c;
+  color: #808080;
+  cursor: not-allowed;
+}
+
+main .block-editor .block-editor-preview {
+  background: transparent;
+  color: #fff;
+  border: 1px solid #5c5c5c;
+}
+
+main .block-editor .block-editor-preview:hover:not(:disabled) {
+  background: #3c3c3c;
+}
+
+main .block-editor .block-editor-preview:disabled {
+  color: #808080;
+  cursor: not-allowed;
+}
+
+main .block-editor .block-editor-tabs {
+  display: flex;
+  background: #252526;
+  border-bottom: 1px solid #3c3c3c;
+}
+
+main .block-editor .block-editor-tab {
+  padding: 10px 20px;
+  font-size: 13px;
+  font-weight: 500;
+  background: transparent;
+  color: #808080;
+  border: none;
+  border-bottom: 2px solid transparent;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+main .block-editor .block-editor-tab:hover {
+  color: #fff;
+  background: #2d2d30;
+}
+
+main .block-editor .block-editor-tab.active {
+  color: #fff;
+  border-bottom-color: #007acc;
+}
+
+main .block-editor .block-editor-panels {
+  flex: 1;
+  position: relative;
+  overflow: hidden;
+}
+
+main .block-editor .block-editor-panel {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: none;
+}
+
+main .block-editor .block-editor-panel.active {
+  display: block;
+}
+
+main .block-editor .block-editor-monaco {
+  width: 100%;
+  height: 100%;
+}
+
+main .block-editor .block-editor-status {
+  padding: 8px 20px;
+  background: #007acc;
+  color: #fff;
+  font-size: 12px;
+}
+
+main .block-editor .block-editor-status-text {
+  opacity: 0.9;
+}
+
+main .block-editor .block-editor-error {
+  padding: 40px;
+  text-align: center;
+  color: #f44336;
+  background: #1e1e1e;
+}
+
+@media (width < 768px) {
+  main .block-editor .block-editor-container {
+    height: 500px;
+  }
+
+  main .block-editor .block-editor-header {
+    flex-direction: column;
+    gap: 12px;
+    align-items: flex-start;
+  }
+
+  main .block-editor .block-editor-actions {
+    flex-wrap: wrap;
+    width: 100%;
+  }
+
+  main .block-editor .block-editor-block-select {
+    width: 100%;
+  }
+}
